@@ -1,6 +1,4 @@
-function capitalize(word) {
-  //  Haven't gotten throw new Error to work yet
-  //so I have done a work-around  
+function capitalize(word) { 
   if (word === undefined) throw new Error("word is required");
   word = word[0].toUpperCase() + word.slice(1);
   return word
