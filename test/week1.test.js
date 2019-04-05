@@ -11,8 +11,18 @@ const {
   simpleFizzBuzz
 } = require("../challenges/week1");
 
-describe("capitalize", () => {
-  test.only("returns a capitalized string", () => {
+//If a function programs an error, execution would normally stop
+//to override this we can pass an anonymous function to expect
+//and it will run this function and handle any errors and allow
+//us to test what this error was and continue with the program.
+describe.only("capitalize", () => {
+  test("throws an error if word is not passed", ()=> {
+    expect(function (){
+      capitalize()
+    }).toThrow("word is required") 
+  });
+
+  test("returns a capitalized string", () => {
     expect(capitalize("hello")).toBe("Hello"); 
   });
 
