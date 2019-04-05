@@ -46,13 +46,18 @@ describe("generateInitials", () => {
       generateInitials()
     }).toThrow("name is required")
   });
+ 
+describe("addVAT", () => {
+  test("adds a VAT of 20% to a price of 100", () => {
+    expect(addVAT(100, 20)).toBe(120);
+  });
+});
 
-
-// describe("addVAT", () => {
-//   test("adds a VAT of 20% to a price of 100", () => {
-//     expect(addVAT(100, 20)).toBe(120);
-//   });
-
+test("Throws an error if values are not passed", ()=> {
+  expect(function (){
+    addVAT()
+  }).toThrow("originalPrice is requied", "vatRate is required")
+});
 //   test("adds a VAT of 17.5% to a price of 40", () => {
 //     expect(addVAT(40, 17.5)).toBe(47);
 //   });

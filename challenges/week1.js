@@ -12,15 +12,18 @@ function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("name is required");
   if (lastName === undefined) throw new Error("lastName is required");
   // Add your code here!
-  nameInitials = firstName.slice(0,1) + "." + lastName.slice(0,1)
- return nameInitials 
+  nameInitials = firstName.slice(0,1) + "." + lastName.slice(0,1);
+  return nameInitials 
 }
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
+  vatAdded = (originalPrice * vatRate) / 100 + originalPrice
+  return vatAdded
 }
+
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
