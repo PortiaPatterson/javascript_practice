@@ -39,25 +39,26 @@ describe("generateInitials", () => {
   test("returns the initials of a firstname and surname", () => {
     expect(generateInitials("Frederic", "Bonneville")).toBe("F.B");
   });
-});
+
 
   test("Throws an error if names are not passed", ()=> {
     expect(function (){
       generateInitials()
     }).toThrow("name is required")
   });
+});
  
 describe("addVAT", () => {
   test("adds a VAT of 20% to a price of 100", () => {
     expect(addVAT(100, 20)).toBe(120);
   });
-});
 
-test("Throws an error if values are not passed", ()=> {
-  expect(function (){
-    addVAT()
-  }).toThrow("originalPrice is requied", "vatRate is required")
-});
+
+  test("Throws an error if values are not passed", ()=> {
+    expect(function (){
+      addVAT()
+    }).toThrow("originalPrice is requied", "vatRate is required")
+  });
 
   test("adds a VAT of 17.5% to a price of 40", () => {
     expect(addVAT(40, 17.5)).toBe(47);
@@ -70,13 +71,12 @@ test("Throws an error if values are not passed", ()=> {
   test("adds a VAT of 0% to a price of 25", () => {
     expect(addVAT(25, 0)).toBe(25);
   });
-
+});
 
 describe("getSalePrice", () => {
   test("reduces a price of 100 by 50%", () => {
     expect(getSalePrice(100, 50)).toBe(50);
   });
-});
 
   test("reduces a price of 100 by 33.3%", () => {
     expect(getSalePrice(100, 33.3)).toBe(66.7);
@@ -89,18 +89,19 @@ describe("getSalePrice", () => {
   test("reduces a price of 50 by 0%", () => {
     expect(getSalePrice(50, 0)).toBe(50);
   });
+});
 
 describe("getMiddleCharacter", () => {
   test("returns the middle character from a string of odd length", () => {
     expect(getMiddleCharacter("bears!!!!")).toBe("s");
   });
-});
+
 
   test("returns the middle 2 characters from a string of even length", () => {
     expect(getMiddleCharacter("help!!")).toBe("lp");
   });
 
-
+});
 // describe("reverseWord", () => {
 //   test("returns the provided word, reversed", () => {
 //     expect(reverseWord("foo")).toBe("oof");
