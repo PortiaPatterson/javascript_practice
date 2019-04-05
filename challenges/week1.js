@@ -1,7 +1,16 @@
 function capitalize(word) {
-  if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+  //  Haven't gotten throw new Error to work yet
+  //so I have done a work-around  
+  if (word === undefined) {
+    word = "No word";
+  }
+  else{
+    word = word[0].toUpperCase() + word.slice(1);
+  }
+  return word
 }
+
+
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");

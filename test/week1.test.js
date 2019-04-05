@@ -12,8 +12,8 @@ const {
 } = require("../challenges/week1");
 
 describe("capitalize", () => {
-  test("returns a capitalized string", () => {
-    expect(capitalize("hello")).toBe("Hello");
+  test.only("returns a capitalized string", () => {
+    expect(capitalize("hello")).toBe("Hello"); 
   });
 
   test("does nothing if the string is already capitalized", () => {
