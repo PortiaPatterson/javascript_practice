@@ -96,10 +96,10 @@ describe("getMiddleCharacter", () => {
   });
 });
 
-//   test("returns the middle 2 characters from a string of even length", () => {
-//     expect(getMiddleCharacter("help!!")).toBe("lp");
-//   });
-// });
+  test("returns the middle 2 characters from a string of even length", () => {
+    expect(getMiddleCharacter("help!!")).toBe("lp");
+  });
+
 
 // describe("reverseWord", () => {
 //   test("returns the provided word, reversed", () => {
