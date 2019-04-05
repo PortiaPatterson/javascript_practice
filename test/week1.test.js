@@ -90,10 +90,11 @@ describe("getSalePrice", () => {
     expect(getSalePrice(50, 0)).toBe(50);
   });
 
-// describe("getMiddleCharacter", () => {
-//   test("returns the middle character from a string of odd length", () => {
-//     expect(getMiddleCharacter("bears!!!!")).toBe("s");
-//   });
+describe("getMiddleCharacter", () => {
+  test("returns the middle character from a string of odd length", () => {
+    expect(getMiddleCharacter("bears!!!!")).toBe("s");
+  });
+});
 
 //   test("returns the middle 2 characters from a string of even length", () => {
 //     expect(getMiddleCharacter("help!!")).toBe("lp");
