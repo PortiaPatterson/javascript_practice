@@ -58,13 +58,14 @@ test("Throws an error if values are not passed", ()=> {
     addVAT()
   }).toThrow("originalPrice is requied", "vatRate is required")
 });
-//   test("adds a VAT of 17.5% to a price of 40", () => {
-//     expect(addVAT(40, 17.5)).toBe(47);
-//   });
 
-//   test("adds a VAT of 17.5% to a price of 33.50", () => {
-//     expect(addVAT(33.5, 17.5)).toBe(39.36);
-//   });
+  test("adds a VAT of 17.5% to a price of 40", () => {
+    expect(addVAT(40, 17.5)).toBe(47);
+  });
+
+  test("adds a VAT of 17.5% to a price of 33.50", () => {
+    expect(addVAT(33.5, 17.5)).toBe(39.36);
+  });
 
 //   test("adds a VAT of 0% to a price of 25", () => {
 //     expect(addVAT(25, 0)).toBe(25);

@@ -21,7 +21,7 @@ function addVAT(originalPrice, vatRate) {
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
   vatAdded = (originalPrice * vatRate) / 100 + originalPrice
-  return vatAdded
+  return Math.round(vatAdded * 100) / 100
 }
 
 
