@@ -67,28 +67,28 @@ test("Throws an error if values are not passed", ()=> {
     expect(addVAT(33.5, 17.5)).toBe(39.36);
   });
 
-//   test("adds a VAT of 0% to a price of 25", () => {
-//     expect(addVAT(25, 0)).toBe(25);
-//   });
-// });
+  test("adds a VAT of 0% to a price of 25", () => {
+    expect(addVAT(25, 0)).toBe(25);
+  });
 
-// describe("getSalePrice", () => {
-//   test("reduces a price of 100 by 50%", () => {
-//     expect(getSalePrice(100, 50)).toBe(50);
-//   });
 
-//   test("reduces a price of 100 by 33.3%", () => {
-//     expect(getSalePrice(100, 33.3)).toBe(66.7);
-//   });
+describe("getSalePrice", () => {
+  test("reduces a price of 100 by 50%", () => {
+    expect(getSalePrice(100, 50)).toBe(50);
+  });
+});
 
-//   test("reduces a price of 79.99 by 15%", () => {
-//     expect(getSalePrice(79.99, 15)).toBe(67.99);
-//   });
+  test("reduces a price of 100 by 33.3%", () => {
+    expect(getSalePrice(100, 33.3)).toBe(66.7);
+  });
 
-//   test("reduces a price of 50 by 0%", () => {
-//     expect(getSalePrice(50, 0)).toBe(0);
-//   });
-// });
+  test("reduces a price of 79.99 by 15%", () => {
+    expect(getSalePrice(79.99, 15)).toBe(67.99);
+  });
+
+  test("reduces a price of 50 by 0%", () => {
+    expect(getSalePrice(50, 0)).toBe(50);
+  });
 
 // describe("getMiddleCharacter", () => {
 //   test("returns the middle character from a string of odd length", () => {
