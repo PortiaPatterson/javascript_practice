@@ -96,23 +96,28 @@ describe("getMiddleCharacter", () => {
     expect(getMiddleCharacter("bears!!!!")).toBe("s");
   });
 
+  // test("Throws an error if names are not passed", ()=> {
+  //   expect(function (){
+  //     generateInitials()
+  //   }).toThrow("name is required")
+  // });
 
   test("returns the middle 2 characters from a string of even length", () => {
     expect(getMiddleCharacter("help!!")).toBe("lp");
   });
 
 });
-// describe("reverseWord", () => {
-//   test("returns the provided word, reversed", () => {
-//     expect(reverseWord("foo")).toBe("oof");
-//   });
+describe("reverseWord", () => {
+  test("returns the provided word, reversed", () => {
+    expect(reverseWord("foo")).toBe("oof");
+  });
 
-//   test("returns a longer sentence, reversed", () => {
-//     expect(reverseWord("why would you even want to do this?")).toBe(
-//       "?siht od ot tnaw neve uoy dluow yhw"
-//     );
-//   });
-// });
+  test("returns a longer sentence, reversed", () => {
+    expect(reverseWord("why would you even want to do this?")).toBe(
+      "?siht od ot tnaw neve uoy dluow yhw"
+    );
+  });
+});
 
 // describe("reverseAllWords", () => {
 //   test("reverses a single word in an array", () => {
@@ -120,7 +125,7 @@ describe("getMiddleCharacter", () => {
 //   });
 
 //   test("reverses a multiple words in an array", () => {
-//     expect(
+    // expect(
 //       reverseAllWords(["jest", "mocha", "rspec", "jasmine", "selenium"])
 //     ).toEqual(["tsej", "ahcom", "cepsr", "enimsaj", "muineles"]);
 //   });
@@ -151,16 +156,16 @@ describe("getMiddleCharacter", () => {
 //   });
 // });
 
-// describe("getMeanScore", () => {
-//   test("returns the mean score from an array of scores", () => {
-//     expect(getMeanScore([8, 9, 7])).toBe(8);
-//     expect(getMeanScore([88, 86, 93])).toBe(89);
-//   });
+describe("getMeanScore", () => {
+  test("returns the mean score from an array of scores", () => {
+    expect(getMeanScore([8, 9, 7])).toBe(8);
+    expect(getMeanScore([88, 86, 93])).toBe(89);
+  });
 
-//   test("returns the mean to 2 decimal places", () => {
-//     expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBe(28.29);
-//   });
-// });
+  test("returns the mean to 2 decimal places", () => {
+    expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBe(28.29);
+  });
+});
 
 // describe("simpleFizzBuzz", () => {
 //   test("returns 'fizz' if the number is divisible by 3", () => {
@@ -168,7 +173,7 @@ describe("getMiddleCharacter", () => {
 //   });
 
 //   test("returns 'buzz' if the number is divisible by 5", () => {
-//     expect(simpleFizzBuzz(3)).toBe("buzz");
+//     expect(simpleFizzBuzz(5)).toBe("buzz");
 //   });
 
 //   test("returns the number if the number is divisible by neither 3 nor 5", () => {

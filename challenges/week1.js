@@ -5,7 +5,6 @@ function capitalize(word) {
 }
 
 
-
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("name is required");
   if (lastName === undefined) throw new Error("lastName is required");
@@ -44,14 +43,22 @@ function getMiddleCharacter(str) {
   }
 }
 
+// This function takes in a string, splits it out and  
+// then uses the reverse operation to reverse the string and 
+// then rejoined and put in reversedString
+  
 function reverseWord(word) {
-  if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+  // if (word === undefined) throw new Error("word is required");
+  
+    reversedString = word.split("").reverse().join("")
+
+return reversedString
 }
 
 function reverseAllWords(words) {
-  if (words === undefined) throw new Error("words is required");
-  // Add your code here!
+  // if (words === undefined) throw new Error("words is required");
+  reverseArray = words.split("").reverse()
+  return reverseArray
 }
 
 function countLinuxUsers(users) {
@@ -60,13 +67,27 @@ function countLinuxUsers(users) {
 }
 
 function getMeanScore(scores) {
-  if (scores === undefined) throw new Error("scores is required");
+  // if (scores === undefined) throw new Error("scores is required");
   // Add your code here!
+  // this code takes some values from an array, totals them and then divides them by
+  // the amount of numbers there are to find the mean average. Math.round is used to 
+  // make sure that it is set to 2 decimal place; you also must multiply the number 
+  // by 100 then divide it by 100.
+  totSum = 0;
+  i = 0;
+  
+  for (i = 0; i < scores.length; i++){
+    totSum = totSum + scores[i];
+  }
+  
+  return Math.round(totSum/i * 100) / 100; 
 }
+// scores.forEach(getMeanScore);
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // Add your code here!
+  
 }
 
 module.exports = {
