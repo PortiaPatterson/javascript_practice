@@ -1,4 +1,4 @@
-function capitalize(word) { 
+function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
   word = word[0].toUpperCase() + word.slice(1);
   return word
@@ -9,8 +9,8 @@ function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("name is required");
   if (lastName === undefined) throw new Error("lastName is required");
   // Add your code here!
-  nameInitials = firstName.slice(0,1) + "." + lastName.slice(0,1);
-  return nameInitials 
+  nameInitials = firstName.slice(0, 1) + "." + lastName.slice(0, 1);
+  return nameInitials
 }
 
 function addVAT(originalPrice, vatRate) {
@@ -33,7 +33,7 @@ function getSalePrice(originalPrice, reduction) {
 function getMiddleCharacter(str) {
   //if (str === undefined) throw new Error("str is required");
   // Add your code here!
-  if (str.length % 2 == 1){
+  if (str.length % 2 == 1) {
     strMiddle = (str.length - 1) / 2
     return str[strMiddle]
   } else {
@@ -46,13 +46,13 @@ function getMiddleCharacter(str) {
 // This function takes in a string, splits it out and  
 // then uses the reverse operation to reverse the string and 
 // then rejoined and put in reversedString
-  
+
 function reverseWord(word) {
   // if (word === undefined) throw new Error("word is required");
-  
-    reversedString = word.split("").reverse().join("")
 
-return reversedString
+  reversedString = word.split("").reverse().join("")
+
+  return reversedString
 }
 
 function reverseAllWords(words) {
@@ -62,8 +62,21 @@ function reverseAllWords(words) {
 }
 
 function countLinuxUsers(users) {
-  if (users === undefined) throw new Error("users is required");
+  // if (users === undefined) throw new Error("users is required");
   // Add your code here!
+  // This code uses filter to loop through an array and find a particular string and also
+  // count how many of these strings have been found, if some are found it returns 
+  // the number of them found or else a 0.
+  i = 0;
+  const linuxUsers = users.filter(function(check){
+    if(check.type === "Linux"){
+      i = i + 1;
+      return i;
+    } else {
+      
+      return 0;
+    }
+  })
 }
 
 function getMeanScore(scores) {
@@ -75,19 +88,32 @@ function getMeanScore(scores) {
   // by 100 then divide it by 100.
   totSum = 0;
   i = 0;
-  
-  for (i = 0; i < scores.length; i++){
+
+  for (i = 0; i < scores.length; i++) {
     totSum = totSum + scores[i];
   }
-  
-  return Math.round(totSum/i * 100) / 100; 
+
+  return Math.round(totSum / i * 100) / 100;
 }
 // scores.forEach(getMeanScore);
 
 function simpleFizzBuzz(n) {
-  if (n === undefined) throw new Error("n is required");
+  // if (n === undefined) throw new Error("n is required");
   // Add your code here!
-  
+  // This uses % to determine if a number can be divided by another number without a remainder
+  // it uses && to stand for AND, ̣|| to stand for OR.
+  if (n % 3 === 0 && n % 5 === 0) {
+    return "fizzbuzz"
+  }
+  if (n % 3 === 0) {
+    return "fizz"
+  }
+  if (n % 5 === 0) {
+    return "buzz"
+  }
+  if (n % 3 === 1 || n % 5 === 1) {
+    return n
+  }
 }
 
 module.exports = {

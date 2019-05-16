@@ -131,16 +131,16 @@ describe("reverseWord", () => {
 //   });
 // });
 
-// describe("countLinuxUsers", () => {
-//   test("returns 0 if no Linux users found", () => {
-//     const users = [
-//       { name: "Heather", OS: "Windows 8", type: "Windows" },
-//       { name: "Paul", OS: "Firefox OS", type: "Unknown" },
-//       { name: "Sheila", OS: "Windows 10", type: "Windows" },
-//       { name: "Pedro", OS: "Windows 95", type: "Windows" }
-//     ];
-//     expect(countLinuxUsers(users)).toBe(0);
-//   });
+describe("countLinuxUsers", () => {
+  test("returns 0 if no Linux users found", () => {
+    const users = [
+      { name: "Heather", OS: "Windows 8", type: "Windows" },
+      { name: "Paul", OS: "Firefox OS", type: "Unknown" },
+      { name: "Sheila", OS: "Windows 10", type: "Windows" },
+      { name: "Pedro", OS: "Windows 95", type: "Windows" }
+    ];
+    expect(countLinuxUsers(users)).toBe(0);
+  });
 
 //   test("returns the correct number of Linux users found", () => {
 //     const users = [
@@ -154,7 +154,7 @@ describe("reverseWord", () => {
 //     ];
 //     expect(countLinuxUsers(users)).toBe(5);
 //   });
-// });
+});
 
 describe("getMeanScore", () => {
   test("returns the mean score from an array of scores", () => {
@@ -167,20 +167,20 @@ describe("getMeanScore", () => {
   });
 });
 
-// describe("simpleFizzBuzz", () => {
-//   test("returns 'fizz' if the number is divisible by 3", () => {
-//     expect(simpleFizzBuzz(3)).toBe("fizz");
-//   });
+describe("simpleFizzBuzz", () => {
+  test("returns 'fizz' if the number is divisible by 3", () => {
+    expect(simpleFizzBuzz(3)).toBe("fizz");
+  });
 
-//   test("returns 'buzz' if the number is divisible by 5", () => {
-//     expect(simpleFizzBuzz(5)).toBe("buzz");
-//   });
+  test("returns 'buzz' if the number is divisible by 5", () => {
+    expect(simpleFizzBuzz(5)).toBe("buzz");
+  });
 
-//   test("returns the number if the number is divisible by neither 3 nor 5", () => {
-//     expect(simpleFizzBuzz(4)).toBe(4);
-//   });
+  test("returns the number if the number is divisible by neither 3 nor 5", () => {
+    expect(simpleFizzBuzz(4)).toBe(4);
+  });
 
-//   test("returns 'fizzbuzz' if the number is divisible by 3 and 5", () => {
-//     expect(simpleFizzBuzz(15)).toBe("fizzbuzz");
-//   });
-// });
+  test("returns 'fizzbuzz' if the number is divisible by 3 and 5", () => {
+    expect(simpleFizzBuzz(15)).toBe("fizzbuzz");
+  });
+});
