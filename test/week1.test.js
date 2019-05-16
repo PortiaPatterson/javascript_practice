@@ -142,18 +142,18 @@ describe("countLinuxUsers", () => {
     expect(countLinuxUsers(users)).toBe(0);
   });
 
-//   test("returns the correct number of Linux users found", () => {
-//     const users = [
-//       { name: "Heather", OS: "Ubuntu 18.04", type: "Linux" },
-//       { name: "Paul", OS: "Ubuntu 16.04", type: "Linux" },
-//       { name: "Sheila", OS: "Windows 10", type: "Windows" },
-//       { name: "Jane", OS: "Mint 19.1", type: "Linux" },
-//       { name: "Jen", OS: "CentOS 7", type: "Linux" },
-//       { name: "David", OS: "Fedora 28", type: "Linux" },
-//       { name: "Pedro", OS: "Windows 95", type: "Windows" }
-//     ];
-//     expect(countLinuxUsers(users)).toBe(5);
-//   });
+  test("returns the correct number of Linux users found", () => {
+    const users = [
+      { name: "Heather", OS: "Ubuntu 18.04", type: "Linux" },
+      { name: "Paul", OS: "Ubuntu 16.04", type: "Linux" },
+      { name: "Sheila", OS: "Windows 10", type: "Windows" },
+      { name: "Jane", OS: "Mint 19.1", type: "Linux" },
+      { name: "Jen", OS: "CentOS 7", type: "Linux" },
+      { name: "David", OS: "Fedora 28", type: "Linux" },
+      { name: "Pedro", OS: "Windows 95", type: "Windows" }
+    ];
+    expect(countLinuxUsers(users)).toBe(5);
+  });
 });
 
 describe("getMeanScore", () => {

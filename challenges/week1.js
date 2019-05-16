@@ -66,18 +66,18 @@ function countLinuxUsers(users) {
   // Add your code here!
   // This code uses filter to loop through an array and find a particular string and also
   // count how many of these strings have been found, if some are found it returns 
-  // the number of them found or else a 0.
+  // the number of them found or else a 0. 
   i = 0;
-  const linuxUsers = users.filter(function(check){
-    if(check.type === "Linux"){
-      i = i + 1;
-      return i;
-    } else {
-      
-      return 0;
-    }
-  })
-}
+  userCount = 0;
+  users.forEach(function(user){
+     if (user.type == "Linux"){
+       userCount = userCount + 1;
+     } else {
+       userCount = userCount + 0;
+     }
+  });  
+  return userCount;
+};
 
 function getMeanScore(scores) {
   // if (scores === undefined) throw new Error("scores is required");
