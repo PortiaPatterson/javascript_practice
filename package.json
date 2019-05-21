@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
   
-    "test": "jest test/week1.test.js",
+    "test": "jest test/week2.test.js",
     "eslint": "eslint ./"
   },
   "repository": {

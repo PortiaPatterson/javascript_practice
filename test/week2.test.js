@@ -6,7 +6,13 @@ const {
   hasMPostCode
 } = require("../challenges/week2");
 
-xdescribe("getFillings", () => {
+describe("getFillings", () => {
+  test("throws an error if ingredients are not passed", ()=> {
+    expect(function (){
+      getFillings()
+    }).toThrow("ingredients is required") 
+  });
+
   test("returns the fillings of a sandwich", () => {
     const sandwich = {
       bread: "Sourdough",
