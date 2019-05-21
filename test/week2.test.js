@@ -6,7 +6,7 @@ const {
   hasMPostCode
 } = require("../challenges/week2");
 
-xdescribe("getFillings", () => {
+describe("getFillings", () => {
   test("throws an error if ingredients are not passed", ()=> {
     expect(function (){
       getFillings()
@@ -30,7 +30,7 @@ xdescribe("getFillings", () => {
   });
 });
 
-xdescribe("isFromManchester", () => {
+describe("isFromManchester", () => {
   test("throws an error if person not passed", ()=> {
     expect(function (){
       isFromManchester()
@@ -55,7 +55,7 @@ xdescribe("isFromManchester", () => {
   });
 });
 
-xdescribe("getBusNumbers", () => {
+describe("getBusNumbers", () => {
   // A bus can hold 40 people. This function should return how many buses are required for the number of people
   test("throws an error if the number of people is not passed", ()=> {
     expect(function (){
