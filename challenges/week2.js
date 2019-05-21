@@ -1,8 +1,3 @@
-function capitalize(word) {
-  if (word === undefined) throw new Error("word is required");
-  word = word[0].toUpperCase() + word.slice(1);
-  return word
-}
 function getFillings(sandwich) {
   if (sandwich === undefined) throw new Error("ingredients is required");
   // Your code here!
@@ -11,8 +6,14 @@ function getFillings(sandwich) {
 }
 
 function isFromManchester(person) {
-  if (person === undefined) throw new Error("person is required");
+  // if (person === undefined) throw new Error("person is required");
   // Your code here!
+  if (person.city === "Manchester"){
+    rightCity = true;
+  } else {
+    rightCity = false;
+  }
+    return rightCity;
 }
 
 function getBusNumbers(people) {
