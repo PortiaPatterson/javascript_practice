@@ -6,7 +6,7 @@ const {
   hasMPostCode
 } = require("../challenges/week2");
 
-describe("getFillings", () => {
+xdescribe("getFillings", () => {
   test("throws an error if ingredients are not passed", ()=> {
     expect(function (){
       getFillings()
@@ -30,7 +30,12 @@ describe("getFillings", () => {
   });
 });
 
-describe("isFromManchester", () => {
+xdescribe("isFromManchester", () => {
+  test("throws an error if person not passed", ()=> {
+    expect(function (){
+      isFromManchester()
+    }).toThrow("person is required") 
+  });
   test("returns true if the person is from Manchester", () => {
     const person = {
       name: "Mohammed",
@@ -50,8 +55,13 @@ describe("isFromManchester", () => {
   });
 });
 
-describe("getBusNumbers", () => {
+xdescribe("getBusNumbers", () => {
   // A bus can hold 40 people. This function should return how many buses are required for the number of people
+  test("throws an error if the number of people is not passed", ()=> {
+    expect(function (){
+      getBusNumbers()
+    }).toThrow("number of people is required") 
+  });
   test("returns 1 if all the people fit in 1 bus", () => {
     expect(getBusNumbers(1)).toBe(1);
     expect(getBusNumbers(10)).toBe(1);
@@ -79,7 +89,12 @@ describe("getBusNumbers", () => {
   });
 });
 
-xdescribe("countSheep", () => {
+describe("countSheep", () => {
+  test("throws an error if there is no array", ()=> {
+    expect(function (){
+      countSheep()
+    }).toThrow("array is required") 
+  });
   test("returns 0 if there are 0 sheep in the array", () => {
     const arr = ["dog", "badger", "dog", "dog", "chicken"];
     expect(countSheep(arr)).toBe(0);
