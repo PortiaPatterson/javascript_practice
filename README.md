@@ -95,7 +95,7 @@ xdescribe("capitalize", () => {
 
   test("does nothing if the word is already capitalized", () => {
     expect(capitalize("Hello")).toBe("Hello");
-  });
+  });-m
 
   test("capitalizes the first word of a sentence", () => {
     expect(capitalize("the quick fox")).toBe("The quick fox");

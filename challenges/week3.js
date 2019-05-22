@@ -1,6 +1,11 @@
 function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here!
+  let squaresArray = [];
+  if (nums === 0){
+    squaresArray = nums;
+  }
+  return squaresArray;
 }
 
 function camelCaseWords(words) {
