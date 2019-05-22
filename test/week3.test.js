@@ -18,18 +18,18 @@ describe("getSquares", () => {
     expect(getSquares([])).toEqual([]);
   });
 
-  // test("returns an array of squares of the original numbers", () => {
-  //   expect(getSquares([2, 4, 6])).toEqual([4, 16, 36]);
-  //   expect(getSquares([2, 4, 6, 1])).toEqual([4, 16, 36, 1]);
-  //   expect(getSquares([2, 3, 6, 7, 12, 4])).toEqual([4, 9, 36, 49, 144, 16]);
-  //   expect(getSquares([54, 24, 5, 66, 992])).toEqual([
-  //     2916,
-  //     576,
-  //     25,
-  //     4356,
-  //     984064
-  //   ]);
-  // });
+  test("returns an array of squares of the original numbers", () => {
+    expect(getSquares([2, 4, 6])).toEqual([4, 16, 36]);
+    expect(getSquares([2, 4, 6, 1])).toEqual([4, 16, 36, 1]);
+    expect(getSquares([2, 3, 6, 7, 12, 4])).toEqual([4, 9, 36, 49, 144, 16]);
+    expect(getSquares([54, 24, 5, 66, 992])).toEqual([
+      2916,
+      576,
+      25,
+      4356,
+      984064
+    ]);
+  });
 });
 
 xdescribe("camelCaseWords", () => {

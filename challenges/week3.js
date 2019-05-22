@@ -2,8 +2,13 @@ function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
   // Your code here!
   let squaresArray = [];
-  if (nums === 0){
+  if (nums === 0) {
     squaresArray = nums;
+  }
+  if (nums.length > 0) {
+    squaresArray = nums.map(function (num) {
+      return num * num;
+    })
   }
   return squaresArray;
 }
