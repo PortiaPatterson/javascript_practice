@@ -126,7 +126,12 @@ describe("countSheep", () => {
   });
 });
 
-xdescribe("hasMPostCode", () => {
+describe("hasMPostCode", () => {
+  test("if no person throws an error", ()=> {
+    expect(function (){
+      hasMPostCode()
+    }).toThrow("person is required") 
+  });
   test("returns true if the person has a postcode starting with M", () => {
     const person = {
       name: "Mohammed",
