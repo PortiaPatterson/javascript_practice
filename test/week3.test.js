@@ -75,14 +75,14 @@ describe("getTotalSubjects", () => {
     expect(getTotalSubjects(people)).toBe(1);
   });
 
-//   test("returns the correct number of subjects studied in total for all people", () => {
-//     const people = [
-//       { name: "Billy", subjects: ["welsh", "spanish"] },
-//       { name: "Claude", subjects: ["chemistry", "biology", "music"] },
-//       { name: "Aneeta", subjects: ["physics", "maths", "computing", "music"] }
-//     ];
-//     expect(getTotalSubjects(people)).toBe(9);
-//   });
+  test("returns the correct number of subjects studied in total for all people", () => {
+    const people = [
+      { name: "Billy", subjects: ["welsh", "spanish"] },
+      { name: "Claude", subjects: ["chemistry", "biology", "music"] },
+      { name: "Aneeta", subjects: ["physics", "maths", "computing", "music"] }
+    ];
+    expect(getTotalSubjects(people)).toBe(9);
+  });
 });
 
 xdescribe("checkIngredients", () => {

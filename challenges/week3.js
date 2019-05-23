@@ -21,16 +21,16 @@ function camelCaseWords(words) {
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
   // Your code here!
-    let subjCount = 0;
-    people.forEach(function(person){
-      if (person.subjects == ""){
-        subjCount = subjCount + 0;
-      } else {
-        subjCount = subjCount + 1;
-      }
-    });
-    return subjCount;
-  };
+  let subjCount = 0;
+  people.forEach(function (person) {
+    if (person.subjects == "") {
+      subjCount = subjCount + 0;
+    } else {
+      subjCount = subjCount + person.subjects.length;
+    }
+  });
+  return subjCount;
+};
 
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
