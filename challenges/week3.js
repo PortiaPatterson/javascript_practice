@@ -40,9 +40,19 @@ function checkIngredients(menu, ingredient) {
 
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
-  if (!arr2) throw new Error("arr2 is required");
+  // if (!arr2) throw new Error("arr2 is required");
   // Your code here!
-}
+let dupNum = [];
+  arr1.forEach(function(num1){
+      arr2.forEach(function(num2){
+        if (num1 == num2){
+          dupNum.push(num2);
+        }
+    })
+  });
+  dupNum.sort(function(a, b){return a-b});
+ return dupNum;
+};
 
 module.exports = {
   getSquares,
