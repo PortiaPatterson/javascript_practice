@@ -7,7 +7,7 @@ const {
 } = require("../challenges/week3");
 
 
-describe("getSquares", () => {
+xdescribe("getSquares", () => {
   test("throws an error if nums are not passed", ()=> {
     expect(function (){
       getSquares()
@@ -33,7 +33,12 @@ describe("getSquares", () => {
 });
 
 xdescribe("camelCaseWords", () => {
-  test("camel cases a single word (i.e. no capital letter at beginning)", () => {
+  test("throws an error if no words are passed", ()=> {
+    expect(function (){
+      camelCaseWords()
+    }).toThrow("words are required") 
+  });
+  test.only("camel cases a single word (i.e. no capital letter at beginning)", () => {
     expect(camelCaseWords(["my"])).toBe("my");
   });
 
@@ -51,7 +56,7 @@ xdescribe("camelCaseWords", () => {
   });
 });
 
-describe("getTotalSubjects", () => {
+xdescribe("getTotalSubjects", () => {
   test("throws an error if people are not entered", ()=> {
     expect(function (){
       getTotalSubjects()
@@ -86,6 +91,11 @@ describe("getTotalSubjects", () => {
 });
 
 xdescribe("checkIngredients", () => {
+  test("throws an error if menu not entered", ()=> {
+    expect(function (){
+      checkIngredients()
+    }).toThrow("menu is required") 
+  });
   test("returns false if no menu items include the specified ingredient", () => {
     const menu = [
       {
@@ -145,7 +155,7 @@ xdescribe("checkIngredients", () => {
   });
 });
 
-describe("duplicateNumbers", () => {
+xdescribe("duplicateNumbers", () => {
   test("throws an error if arr1 not entered", ()=> {
     expect(function (){
       duplicateNumbers()
