@@ -16,19 +16,30 @@ function getSquares(nums) {
 function camelCaseWords(words) {
   if (!words) throw new Error("words are required");
   // Your code here!
-  let firstPartWord = "";
-  let secPartWord = "";
-  let rejoinedWord = "";
-  words.forEach(function(word){
-    firstPartWord = word.charAt(0).toLowerCase()
-    secPartWord = word.slice(1);
-    rejoinedWord = firstPartWord + secPartWord;
-  
-  });
-  return rejoinedWord;
- }
+  //  This will allow you to put various words into a new array that have been changes
+  // newWord.push(word);
 
-  // let newWords = [];
+  let newWord = [];
+  let rejoinedWord = "";
+  words.forEach(function (word, index) {
+    if (words.length === 1) {
+      rejoinedWord = word.charAt(0).toLowerCase() + word.slice(1);
+      newWord.push(rejoinedWord);
+    }
+    if (words.length > 1 && index == 0) {
+      rejoinedWord = word.charAt(0).toLowerCase() + word.slice(1);
+      newWord.push(rejoinedWord);
+    }
+
+    if (words.length > 1 && index > 0) {
+      rejoinedWord = word.charAt(0).toUpperCase() + word.slice(1);
+      newWord.push(rejoinedWord);
+    }
+  });
+
+  return newWord.join('');
+}
+
 
 
 function getTotalSubjects(people) {
@@ -51,44 +62,44 @@ function checkIngredients(menu, ingredient) {
   // Your code here!
   let ingPresent = true;
   let ingName = [];
-      menu.forEach(function(item){
-        item.map(function(){
-          if(item.ingredients == ingredient){
-            ingPresent = true;
-          }
-        })
-        // ingName.push(item.ingredients);
+  menu.forEach(function (item) {
+    item.map(function () {
+      if (item.ingredients == ingredient) {
+        ingPresent = true;
+      }
+    })
+    // ingName.push(item.ingredients);
 
-        
-        // if (item.ingredients == ingredient){
-          ingName = ingredient;
-        //   ingredientPresent = true;
-        // } else {
-        //   ingredientPresent = false;
-        // }
-      });
-      // if (ingName == ingredient){
-      //     ingPresent = true;
-      // } else {
-      //   ingPresent = false;
-      // }
-      //   return ingPresent;
-    };
+
+    // if (item.ingredients == ingredient){
+    ingName = ingredient;
+    //   ingredientPresent = true;
+    // } else {
+    //   ingredientPresent = false;
+    // }
+  });
+  // if (ingName == ingredient){
+  //     ingPresent = true;
+  // } else {
+  //   ingPresent = false;
+  // }
+  //   return ingPresent;
+};
 
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   // if (!arr2) throw new Error("arr2 is required");
   // Your code here!
-let dupNum = [];
-  arr1.forEach(function(num1){
-      arr2.forEach(function(num2){
-        if (num1 == num2){
-          dupNum.push(num2);
-        }
+  let dupNum = [];
+  arr1.forEach(function (num1) {
+    arr2.forEach(function (num2) {
+      if (num1 == num2) {
+        dupNum.push(num2);
+      }
     })
   });
-  dupNum.sort(function(a, b){return a-b});
- return dupNum;
+  dupNum.sort(function (a, b) { return a - b });
+  return dupNum;
 };
 
 module.exports = {

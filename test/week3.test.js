@@ -7,7 +7,7 @@ const {
 } = require("../challenges/week3");
 
 
-xdescribe("getSquares", () => {
+describe("getSquares", () => {
   test("throws an error if nums are not passed", ()=> {
     expect(function (){
       getSquares()
@@ -32,13 +32,13 @@ xdescribe("getSquares", () => {
   });
 });
 
-xdescribe("camelCaseWords", () => {
+describe("camelCaseWords", () => {
   test("throws an error if no words are passed", ()=> {
     expect(function (){
       camelCaseWords()
     }).toThrow("words are required") 
   });
-  test.only("camel cases a single word (i.e. no capital letter at beginning)", () => {
+  test("camel cases a single word (i.e. no capital letter at beginning)", () => {
     expect(camelCaseWords(["my"])).toBe("my");
   });
 
@@ -56,7 +56,7 @@ xdescribe("camelCaseWords", () => {
   });
 });
 
-xdescribe("getTotalSubjects", () => {
+describe("getTotalSubjects", () => {
   test("throws an error if people are not entered", ()=> {
     expect(function (){
       getTotalSubjects()
@@ -155,7 +155,7 @@ xdescribe("checkIngredients", () => {
   });
 });
 
-xdescribe("duplicateNumbers", () => {
+describe("duplicateNumbers", () => {
   test("throws an error if arr1 not entered", ()=> {
     expect(function (){
       duplicateNumbers()
