@@ -186,13 +186,13 @@ describe("duplicateNumbers", () => {
     expect(duplicateNumbers(arr1, arr2)).toEqual([1, 2, 3, 7]);
   });
 
-  // test("returns each number only once, even if it appears in one array multiple times", () => {
-  //   let arr1 = [1, 2, 2, 2, 3, 4, 5];
-  //   let arr2 = [1, 2, 6, 7];
-  //   expect(duplicateNumbers(arr1, arr2)).toEqual([1, 2]);
+  test("returns each number only once, even if it appears in one array multiple times", () => {
+    let arr1 = [1, 2, 2, 2, 3, 4, 5];
+    let arr2 = [1, 2, 6, 7];
+    expect(duplicateNumbers(arr1, arr2)).toEqual([1, 2]);
 
-  //   arr1 = [1, 2, 3];
-  //   arr2 = [3, 3, 3, 4, 5];
-  //   expect(duplicateNumbers(arr1, arr2)).toEqual([3]);
-  // });
+    arr1 = [1, 2, 3];
+    arr2 = [3, 3, 3, 4, 5];
+    expect(duplicateNumbers(arr1, arr2)).toEqual([3]);
+  });
 });

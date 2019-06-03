@@ -80,11 +80,14 @@ function duplicateNumbers(arr1, arr2) {
   let dupNum = [];
   arr1.forEach(function (num1) {
     arr2.forEach(function (num2) {
-      if (num1 == num2) {
+      if (num1 == num2 && !dupNum.includes(num2)) {
         dupNum.push(num2);
       }
     })
   });
+  // Sorting numerical values in an array requires a comparison 
+  // function to check which number is greater and then putting 
+  // the smaller one 1st if u want it in ascending order
   dupNum.sort(function (a, b) { return a - b });
   return dupNum;
 };
