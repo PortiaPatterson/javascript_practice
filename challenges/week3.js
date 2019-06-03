@@ -80,6 +80,7 @@ function duplicateNumbers(arr1, arr2) {
   let dupNum = [];
   arr1.forEach(function (num1) {
     arr2.forEach(function (num2) {
+      // only adding numbers to new array that are duplicated and aren't already in the new array
       if (num1 == num2 && !dupNum.includes(num2)) {
         dupNum.push(num2);
       }
