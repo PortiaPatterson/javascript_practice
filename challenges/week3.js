@@ -60,31 +60,18 @@ function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   // if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
-  let ingPresent = true;
-  let ingName = [];
-  menu.forEach(function (item) {
-    item.map(function () {
-      if (item.ingredients == ingredient) {
-        ingPresent = true;
-      }
-    })
-    // ingName.push(item.ingredients);
+  var inMenu = false;
 
-
-    // if (item.ingredients == ingredient){
-    ingName = ingredient;
-    //   ingredientPresent = true;
-    // } else {
-    //   ingredientPresent = false;
-    // }
+  menu.forEach(function (items) {
+    if (items.ingredients.includes(ingredient)) {
+      inMenu = true;
+    }
   });
-  // if (ingName == ingredient){
-  //     ingPresent = true;
-  // } else {
-  //   ingPresent = false;
-  // }
-  //   return ingPresent;
+
+  return inMenu;
 };
+
+
 
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");

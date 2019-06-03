@@ -90,7 +90,7 @@ describe("getTotalSubjects", () => {
   });
 });
 
-xdescribe("checkIngredients", () => {
+describe("checkIngredients", () => {
   test("throws an error if menu not entered", ()=> {
     expect(function (){
       checkIngredients()
