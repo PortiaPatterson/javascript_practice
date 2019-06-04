@@ -36,7 +36,12 @@ describe("findNamesBeginningWith", () => {
   });
 });
 
-xdescribe("findVerbs", () => {
+describe("findVerbs", () => {
+  test("throws an error if word is not entered", ()=> {
+    expect(function (){
+      findVerbs()
+    }).toThrow("words are required") 
+  });
   test("returns an array of words that are considered verbs (because they begin with 'to ')", () => {
     const words = [
       "to eat",

@@ -7,8 +7,8 @@ function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("name is required");
   // if (!char) throw new Error("char is required");
   // Your code here
-  let namesFound = names.filter(function(name){
-    if(name.charAt(0) == char){
+  let namesFound = names.filter(function (name) {
+    if (name.charAt(0) == char) {
       return true;
     };
   });
@@ -16,8 +16,16 @@ function findNamesBeginningWith(names, char) {
 }
 
 function findVerbs(words) {
-  if (!words) throw new Error("words is required");
+  if (!words) throw new Error("words are required");
   // Your code here
+  let wordCheck = [];
+  // uses .includes to search for a particular string and prints out any terms that match
+  words.forEach(function (word) {
+    if (word.includes("to ")) {
+      wordCheck.push(word)
+    }
+  });
+  return wordCheck;
 }
 
 function getIntegers(nums) {
