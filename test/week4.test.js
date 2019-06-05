@@ -10,7 +10,7 @@ const {
 } = require("../challenges/week4");
 
 xdescribe("findSmallNums", () => {
-  test("returns an array of numbers smaller than 1", () => {
+    test("returns an array of numbers smaller than 1", () => {
     expect(findSmallNums([8, 1, 1.3, 0.9, 0.4, -1])).toEqual([0.9, 0.4, -1]);
     expect(findSmallNums([-7, -243])).toEqual([-7, -243]);
     expect(findSmallNums([100, 88])).toEqual([]);
@@ -68,7 +68,12 @@ describe("findVerbs", () => {
   });
 });
 
-xdescribe("getIntegers", () => {
+describe("getIntegers", () => {
+  test("throws an error if number is not entered", ()=> {
+    expect(function (){
+      getIntegers()
+    }).toThrow("num is required") 
+  });
   test("returns an array containing only integers", () => {
     const nums = [1, 3.5, 2.1, 1, 4, 9];
     expect(getIntegers(nums)).toEqual([1, 1, 4, 9]);

@@ -29,8 +29,15 @@ function findVerbs(words) {
 }
 
 function getIntegers(nums) {
-  if (!nums) throw new Error("nums is required");
-  // Your code here
+  if (!nums) throw new Error("num is required");
+  // This code creates a new array based on using the Number.isInteger 
+  // to check if a number is a whole one or not
+  let wholeNums = nums.filter(function (num) {
+    if (Number.isInteger(num)) {
+      return true;
+    }
+  });
+  return wholeNums;
 }
 
 function getCities(users) {
