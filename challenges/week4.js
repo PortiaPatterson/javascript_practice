@@ -1,6 +1,14 @@
 function findSmallNums(nums) {
-  if (!nums) throw new Error("nums is required");
+  if (!nums) throw new Error("nums are required");
   // Your code here
+  // Only returns values that are less than 1.
+  let lessThanOne = [];
+  nums.forEach(function (num) {
+    if (num < 1) {
+      lessThanOne.push(num);
+    };
+  });
+  return lessThanOne;
 }
 
 function findNamesBeginningWith(names, char) {
