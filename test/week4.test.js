@@ -9,7 +9,7 @@ const {
   getLongestSides
 } = require("../challenges/week4");
 
-xdescribe("findSmallNums", () => {
+describe("findSmallNums", () => {
   test("throws an error if numbers are not entered", ()=> {
     expect(function (){
       findSmallNums()
@@ -23,7 +23,7 @@ xdescribe("findSmallNums", () => {
   });
 });
 
-xdescribe("findNamesBeginningWith", () => {
+describe("findNamesBeginningWith", () => {
   test("throws an error if name is not entered", ()=> {
     expect(function (){
       findNamesBeginningWith()
@@ -41,7 +41,7 @@ xdescribe("findNamesBeginningWith", () => {
   });
 });
 
-xdescribe("findVerbs", () => {
+describe("findVerbs", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       findVerbs()
@@ -73,7 +73,7 @@ xdescribe("findVerbs", () => {
   });
 });
 
-xdescribe("getIntegers", () => {
+describe("getIntegers", () => {
   test("throws an error if number is not entered", ()=> {
     expect(function (){
       getIntegers()
