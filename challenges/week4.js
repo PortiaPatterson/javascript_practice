@@ -65,9 +65,15 @@ function findSentencesContaining(sentences, str) {
 }
 
 function getLongestSides(triangles) {
-  if (!triangles) throw new Error("triangles is required");
+  if (!triangles) throw new Error("triangles are required");
   // Your code here
-}
+  let sortedNums = [];
+  triangles.map(function (nums) {
+    sortedNums.push(nums.sort(function (a, b) { return b - a })[0]);
+  });
+  return sortedNums;
+};
+
 
 module.exports = {
   findSmallNums,

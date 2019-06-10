@@ -9,7 +9,7 @@ const {
   getLongestSides
 } = require("../challenges/week4");
 
-describe("findSmallNums", () => {
+xdescribe("findSmallNums", () => {
   test("throws an error if numbers are not entered", ()=> {
     expect(function (){
       findSmallNums()
@@ -23,7 +23,7 @@ describe("findSmallNums", () => {
   });
 });
 
-describe("findNamesBeginningWith", () => {
+xdescribe("findNamesBeginningWith", () => {
   test("throws an error if name is not entered", ()=> {
     expect(function (){
       findNamesBeginningWith()
@@ -41,7 +41,7 @@ describe("findNamesBeginningWith", () => {
   });
 });
 
-describe("findVerbs", () => {
+xdescribe("findVerbs", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       findVerbs()
@@ -73,7 +73,7 @@ describe("findVerbs", () => {
   });
 });
 
-describe("getIntegers", () => {
+xdescribe("getIntegers", () => {
   test("throws an error if number is not entered", ()=> {
     expect(function (){
       getIntegers()
@@ -174,7 +174,12 @@ xdescribe("findSentencesContaining", () => {
   });
 });
 
-xdescribe("getLongestSides", () => {
+describe("getLongestSides", () => {
+  test("throws an error if word is not entered", ()=> {
+    expect(function (){
+      getLongestSides()
+    }).toThrow("triangles are required") 
+  });
   test("returns the longest side of each set of triangle data", () => {
     const data = [[6, 7, 10], [9, 3, 6], [6, 3, 5], [6, 13, 12], [7, 12, 8]];
     expect(getLongestSides(data)).toEqual([10, 9, 6, 13, 12]);
