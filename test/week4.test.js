@@ -9,7 +9,7 @@ const {
   getLongestSides
 } = require("../challenges/week4");
 
-describe("findSmallNums", () => {
+xdescribe("findSmallNums", () => {
   test("throws an error if numbers are not entered", ()=> {
     expect(function (){
       findSmallNums()
@@ -23,7 +23,7 @@ describe("findSmallNums", () => {
   });
 });
 
-describe("findNamesBeginningWith", () => {
+xdescribe("findNamesBeginningWith", () => {
   test("throws an error if name is not entered", ()=> {
     expect(function (){
       findNamesBeginningWith()
@@ -41,7 +41,7 @@ describe("findNamesBeginningWith", () => {
   });
 });
 
-describe("findVerbs", () => {
+xdescribe("findVerbs", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       findVerbs()
@@ -73,7 +73,7 @@ describe("findVerbs", () => {
   });
 });
 
-describe("getIntegers", () => {
+xdescribe("getIntegers", () => {
   test("throws an error if number is not entered", ()=> {
     expect(function (){
       getIntegers()
@@ -87,7 +87,7 @@ describe("getIntegers", () => {
   });
 });
 
-describe("getCities", () => {
+xdescribe("getCities", () => {
   test("throws an error if users are not entered", ()=> {
     expect(function (){
       getCities()
@@ -137,13 +137,18 @@ describe("getCities", () => {
 });
 
 xdescribe("getSquareRoots", () => {
-  test("gets the square root of each number to 2 decimal places", () => {
+  test("throws an error if nums are not entered", ()=> {
+    expect(function (){
+      getSquareRoots()
+    }).toThrow("nums are required") 
+  });
+  test.only("gets the square root of each number to 2 decimal places", () => {
     const nums = [36, 77, 12, 355, 92, 5];
     expect(getSquareRoots(nums)).toEqual([6, 8.77, 3.46, 18.84, 9.59, 2.24]);
   });
 });
 
-describe("findSentencesContaining", () => {
+xdescribe("findSentencesContaining", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       findSentencesContaining()
@@ -184,7 +189,7 @@ describe("findSentencesContaining", () => {
   // });
 });
 
-describe("getLongestSides", () => {
+xdescribe("getLongestSides", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       getLongestSides()
