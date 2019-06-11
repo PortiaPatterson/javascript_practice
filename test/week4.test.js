@@ -87,7 +87,12 @@ describe("getIntegers", () => {
   });
 });
 
-xdescribe("getCities", () => {
+describe("getCities", () => {
+  test("throws an error if users are not entered", ()=> {
+    expect(function (){
+      getCities()
+    }).toThrow("users are required") 
+  });
   test("returns an array of the cities of each user", () => {
     const users = [
       {
