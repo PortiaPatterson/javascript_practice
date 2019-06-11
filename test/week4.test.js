@@ -9,7 +9,7 @@ const {
   getLongestSides
 } = require("../challenges/week4");
 
-xdescribe("findSmallNums", () => {
+describe("findSmallNums", () => {
   test("throws an error if numbers are not entered", ()=> {
     expect(function (){
       findSmallNums()
@@ -23,7 +23,7 @@ xdescribe("findSmallNums", () => {
   });
 });
 
-xdescribe("findNamesBeginningWith", () => {
+describe("findNamesBeginningWith", () => {
   test("throws an error if name is not entered", ()=> {
     expect(function (){
       findNamesBeginningWith()
@@ -41,7 +41,7 @@ xdescribe("findNamesBeginningWith", () => {
   });
 });
 
-xdescribe("findVerbs", () => {
+describe("findVerbs", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       findVerbs()
@@ -73,7 +73,7 @@ xdescribe("findVerbs", () => {
   });
 });
 
-xdescribe("getIntegers", () => {
+describe("getIntegers", () => {
   test("throws an error if number is not entered", ()=> {
     expect(function (){
       getIntegers()
@@ -87,7 +87,7 @@ xdescribe("getIntegers", () => {
   });
 });
 
-xdescribe("getCities", () => {
+describe("getCities", () => {
   test("throws an error if users are not entered", ()=> {
     expect(function (){
       getCities()
@@ -136,19 +136,19 @@ xdescribe("getCities", () => {
   });
 });
 
-xdescribe("getSquareRoots", () => {
+describe("getSquareRoots", () => {
   test("throws an error if nums are not entered", ()=> {
     expect(function (){
       getSquareRoots()
     }).toThrow("nums are required") 
   });
-  test.only("gets the square root of each number to 2 decimal places", () => {
+  test("gets the square root of each number to 2 decimal places", () => {
     const nums = [36, 77, 12, 355, 92, 5];
     expect(getSquareRoots(nums)).toEqual([6, 8.77, 3.46, 18.84, 9.59, 2.24]);
   });
 });
 
-xdescribe("findSentencesContaining", () => {
+describe("findSentencesContaining", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       findSentencesContaining()
@@ -189,7 +189,7 @@ xdescribe("findSentencesContaining", () => {
   // });
 });
 
-xdescribe("getLongestSides", () => {
+describe("getLongestSides", () => {
   test("throws an error if word is not entered", ()=> {
     expect(function (){
       getLongestSides()
